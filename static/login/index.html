@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WuzAPI</title>
+    <title>GG.AI Labs Whatsapp API</title>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.js"></script>
@@ -15,38 +15,38 @@
     <div class="main-header">
       <h1 class="ui header center aligned">
         <span class="title-container">
-          <i class="whatsapp icon"></i> Welcome to Wuzapi
+          <i class="whatsapp icon"></i> Bem-vindo(a) a GG.AI Labs Whatsapp API
         </span>
       </h1>
     </div>
 
     <div class="ui segment hidden" id="connectstatus"></div>
 
-    <div class="ui horizontal divider"> Session </div>
+    <div class="ui horizontal divider"> Sessao </div>
     <div class="ui three column stackable grid cards">
       <div class="green card" style="cursor: pointer;" id="authWidget">
-        <div class="content"><a class="ui teal right ribbon label">Session</a>
-          <div class="header">Authenticate</div>
-          <div class="description"> Enter or change authentication token. </div>
+        <div class="content"><a class="ui teal right ribbon label">Sessao</a>
+          <div class="header">Autenticar</div>
+          <div class="description"> Insira ou altere o token de autenticacao. </div>
         </div>
       </div>
  
       <div class="green card hidden" style="cursor: pointer;" id="loginQR">
-        <div class="content"><a class="ui teal right ribbon label">Session</a>
-          <div class="header">Login with QR</div>
-          <div class="description"> Scan your QR code to access all API capabilities.</div>
+        <div class="content"><a class="ui teal right ribbon label">Sessao</a>
+          <div class="header">Entrar com QR</div>
+          <div class="description"> Escaneie o codigo QR para acessar todos os recursos da API.</div>
         </div>
       </div>
       <div class="green card hidden" style="cursor: pointer;" id="loginCode">
-        <div class="content"><a class="ui teal right ribbon label">Session</a>
-          <div class="header">Login with Pairing Code</div>
-          <div class="description"> Enter your pairing code to log in and access your devices.</div>
+        <div class="content"><a class="ui teal right ribbon label">Sessao</a>
+          <div class="header">Entrar com Codigo de Pareamento</div>
+          <div class="description"> Informe seu codigo de pareamento para entrar e acessar seus dispositivos.</div>
         </div>
       </div>
       <div class="green card hidden" style="cursor: pointer;" id="logoutWidget">
-        <div class="content"><a class="ui teal right ribbon label">Session</a>
-          <div class="header">Logout</div>
-          <div class="description">Closes connection to WhatsApp servers and terminate session.</div>
+        <div class="content"><a class="ui teal right ribbon label">Sessao</a>
+          <div class="header">Sair</div>
+          <div class="description">Encerra a conexao com os servidores do WhatsApp e finaliza a sessao.</div>
         </div>
       </div>
     </div>
@@ -55,79 +55,79 @@
     <div class="ui three column stackable grid cards">
       <div class="green card hidden widget" style="cursor: pointer;" id="setWebhook">
         <div class="content"><a class="ui green right ribbon label">Webhook</a>
-          <div class="header">Set Webhook</div>
-          <div class="description"> Sets the webhook to call when an event/message is received.</div>
+          <div class="header">Configurar Webhook</div>
+          <div class="description"> Define o webhook a ser chamado quando um evento ou mensagem for recebido.</div>
         </div>
       </div>
       <div class="green card hidden widget" style="cursor: pointer;" id="getWebhook">
         <div class="content"><a class="ui green right ribbon label">Webhook</a>
-          <div class="header">Get Webhook</div>
-          <div class="description"> Gets the currently configured webhook.</div>
+          <div class="header">Consultar Webhook</div>
+          <div class="description"> Busca o webhook configurado no momento.</div>
         </div>
       </div>
       <div class="green card hidden widget" style="cursor: pointer;" id="deleteWebhook">
         <div class="content"><a class="ui green right ribbon label">Webhook</a>
-          <div class="header">Delete Webhook</div>
-          <div class="description"> Deletes the current webhook.</div>
+          <div class="header">Remover Webhook</div>
+          <div class="description"> Remove o webhook atual.</div>
         </div>
       </div>
     </div>
 
-    <div class="ui horizontal divider widget"> Chat </div>
+    <div class="ui horizontal divider widget"> Conversas </div>
     <div class="ui three column stackable grid cards">
       <div class="blue card hidden widget" style="cursor: pointer;" id="sendTextMessage">
-        <div class="content"><a class="ui blue right ribbon label">Chat</a>
-          <div class="header">Send Text Message</div>
-          <div class="description"> Sends a text message.</div>
+        <div class="content"><a class="ui blue right ribbon label">Conversa</a>
+          <div class="header">Enviar Mensagem de Texto</div>
+          <div class="description"> Envia uma mensagem de texto.</div>
         </div>
       </div>
       <div class="blue card hidden widget" style="cursor: pointer;" id="deleteMessage">
-        <div class="content"><a class="ui blue right ribbon label">Chat</a>
-          <div class="header">Delete Message</div>
-          <div class="description"> Deletes your sent message.</div>
+        <div class="content"><a class="ui blue right ribbon label">Conversa</a>
+          <div class="header">Apagar Mensagem</div>
+          <div class="description"> Apaga uma mensagem enviada.</div>
         </div>
       </div>
     </div>
 
-    <div class="ui horizontal divider widget"> User </div>
+    <div class="ui horizontal divider widget"> Usuario </div>
     <div class="ui three column stackable grid cards">
       <div class="red card hidden widget" style="cursor: pointer;" id="userInfo">
-        <div class="content"><a class="ui red right ribbon label">User</a>
-          <div class="header">User Info</div>
-          <div class="description"> Search users by phone number.</div>
+        <div class="content"><a class="ui red right ribbon label">Usuario</a>
+          <div class="header">Informacoes do Usuario</div>
+          <div class="description"> Busca usuarios pelo numero de telefone.</div>
         </div>
       </div>
       <div class="red card hidden widget" style="cursor: pointer;" id="userAvatar">
-        <div class="content"><a class="ui red right ribbon label">User</a>
-          <div class="header">User Avatar</div>
-          <div class="description"> Get user Avatar by phone number.</div>
+        <div class="content"><a class="ui red right ribbon label">Usuario</a>
+          <div class="header">Avatar do Usuario</div>
+          <div class="description"> Obtem o avatar pelo numero de telefone.</div>
         </div>
       </div>
       <div class="red card hidden widget" style="cursor: pointer;" id="userContacts">
-        <div class="content"><a class="ui red right ribbon label">User</a>
-          <div class="header">Get Contacts</div>
-          <div class="description"> Get all contacts.</div>
+        <div class="content"><a class="ui red right ribbon label">Usuario</a>
+          <div class="header">Listar Contatos</div>
+          <div class="description"> Recupera todos os contatos.</div>
         </div>
       </div>
     </div>
 
-    <!-- Session Modals -->
+    <!-- Modais de Sessao -->
     <div class="ui modal" id="modalAuthenticate"><i class="close icon"></i>
-      <div class="header"> Enter Authentication Token </div>
+      <div class="header"> Informe o Token de Autenticacao </div>
       <div class="content">
         <div class="ui info danger hidden" id="invalidCredentials">
           <div class="ui icon message">
             <i class="exclamation triangle icon"></i>
             <div class="content">
               <div class="header" id="incorrectstatus">
-                Invalid Token
+                Token invalido
               </div>
             </div>
           </div>
         <hr>
         </div>
         <div class="ui form">
-          <div class="field"><label>Token</label><input id='authtoken' type="text" placeholder="Authentication Token"><small>Press Enter to submit</small></div>
+          <div class="field"><label>Token</label><input id='authtoken' type="text" placeholder="Token de Autenticacao"><small>Pressione Enter para enviar</small></div>
         </div>
       </div>
     </div>
@@ -135,48 +135,48 @@
     <div class="ui modal" id="modalLoginQR">
       <i class="close icon"></i>
       <div class="header">
-        Login to Whatsapp with QR Code
+        Entre no Whatsapp com Codigo QR
       </div>
       <div class="image content">
         <div class="ui medium image">
           <div id="qrContainer" class="text-center" style="width:275px;height:275px; border: 10px solid green; margin:auto;"></div>
         </div>
         <div class="description">
-          <div class="ui header">Please scan to connect</div>
-          <p>Open Setting > Linked Devices > Link Device</p>
+          <div class="ui header">Escaneie para conectar</div>
+          <p>Abra Configuracoes > Dispositivos Conectados > Vincular Dispositivo</p>
         </div>
       </div>
     </div>
     
     <div class="ui modal" id="modalLoginWithCode"><i class="close icon"></i>
-      <div class="header"> Getting Pair Code </div>
+      <div class="header"> Obter Codigo de Pareamento </div>
       <div class="content">
         <div class="ui message info">
-          <div class="header" id="pairInfo">How to pair?</div>
+          <div class="header" id="pairInfo">Como parear?</div>
           <ol id="pairHelp">
-            <li>Open your Whatsapp</li>
-            <li>Link a device</li>
-            <li>Link with pair code</li>
+            <li>Abra o seu Whatsapp</li>
+            <li>Vincule um dispositivo</li>
+            <li>Use o codigo de pareamento</li>
           </ol>
         </div>
         <div class="ui form">
-          <div class="field"><label>Phone</label><input id="pairphoneinput" type="text" placeholder="Type your phone number"><small>Press Enter to submit</small></div>
+          <div class="field"><label>Telefone</label><input id="pairphoneinput" type="text" placeholder="Digite seu numero de telefone"><small>Pressione Enter para enviar</small></div>
         </div>
       </div>
     </div>
 
-    <!-- Webhook Modals -->
+    <!-- Modais de Webhook -->
     <div class="ui modal" id="modalGetWebhook"><i class="close icon"></i>
       <div class="header"> Webhook </div>
       <div class="content">
         <div class="ui message info hidden"></div>
         URL:
         <div class="ui message info" id="getWebhookContainer"></div>
-        Events:
+        Eventos:
         <div class="ui message info" id="getWebhookContainerEvents"></div>
       </div>
       <div class="actions">
-        <div class="ui cancel button">Close</div>
+        <div class="ui cancel button">Fechar</div>
       </div>
     </div>
 
@@ -185,18 +185,18 @@
       <div class="content">
         <div class="ui form">
           <div class="field">
-            <label>Webhook Events</label>
+            <label>Eventos do Webhook</label>
             <select id="webhookEvents" class="ui fluid dropdown" multiple="">
-              <option value="">Select Events</option>
-              <option value="Message">Message</option>
-              <option value="ReadReceipt">Read Receipt</option>
-              <option value="Presence">Presence</option>
-              <option value="HistorySync">History Sync</option>
-              <option value="ChatPresence">Chat Presence</option>
-              <option value="All">All</option>
+              <option value="">Selecione os eventos</option>
+              <option value="Message">Mensagem</option>
+              <option value="ReadReceipt">Confirmacao de leitura</option>
+              <option value="Presence">Presenca</option>
+              <option value="HistorySync">Sincronizacao de historico</option>
+              <option value="ChatPresence">Presenca no chat</option>
+              <option value="All">Todos</option>
             </select>
           </div>
-          <div class="field"><label>Webhook URL</label><input id="webhookinput" type="text" placeholder="Type webhook URL"></div>
+          <div class="field"><label>URL do Webhook</label><input id="webhookinput" type="text" placeholder="Digite a URL do webhook"></div>
         </div>
       <br>
       <br>
@@ -205,82 +205,82 @@
       <br>
       </div>
       <div class="actions">
-        <div class="ui cancel button">Close</div>
-        <div class="ui positive right labeled icon button">Set<i class="checkmark icon"></i></div>
+        <div class="ui cancel button">Fechar</div>
+        <div class="ui positive right labeled icon button">Salvar<i class="checkmark icon"></i></div>
       </div>
     </div>
 
     <div class="ui modal" id="modalDeleteWebhook"><i class="close icon"></i>
-      <div class="header"> Delete Webhook </div>
+      <div class="header"> Remover Webhook </div>
       <div class="content">
-          Are you sure?
+          Tem certeza?
       </div>
       <div class="actions">
-        <div class="ui negative button">No</div>
-        <div class="ui positive right labeled icon button">Yes</div>
+        <div class="ui negative button">Nao</div>
+        <div class="ui positive right labeled icon button">Sim</div>
       </div>
     </div>
 
 
-    <!-- User Modals -->
+    <!-- Modais de Usuario -->
 
     <div class="ui modal" id="modalUserInfo"><i class="close icon"></i>
-      <div class="header"> User Info </div>
+      <div class="header"> Informacoes do Usuario </div>
       <div class="content">
         <div class="ui message info hidden" id="userInfoContainer"></div>
         <div class="ui form">
-          <div class="field"><label>Phone</label><input id="userinfoinput" type="text" placeholder="Type phone number"></div>
+          <div class="field"><label>Telefone</label><input id="userinfoinput" type="text" placeholder="Digite o numero de telefone"></div>
         </div>
       </div>
       <div class="actions">
-        <div class="ui cancel button">Close</div>
-        <div class="ui positive right labeled icon button">Get Info<i class="checkmark icon"></i></div>
+        <div class="ui cancel button">Fechar</div>
+        <div class="ui positive right labeled icon button">Buscar<i class="checkmark icon"></i></div>
       </div>
     </div>
 
     <div class="ui modal" id="modalUserAvatar"><i class="close icon"></i>
-      <div class="header"> User Avatar </div>
+      <div class="header"> Avatar do Usuario </div>
       <div class="content">
         <div class="ui message info hidden" id="userAvatarContainer"></div>
         <div class="ui form">
-          <div class="field"><label>Phone</label><input id="useravatarinput" type="text" placeholder="Type phone number"></div>
+          <div class="field"><label>Telefone</label><input id="useravatarinput" type="text" placeholder="Digite o numero de telefone"></div>
         </div>
       </div>
       <div class="actions">
-        <div class="ui cancel button">Close</div>
-        <div class="ui positive right labeled icon button">Get Info<i class="checkmark icon"></i></div>
+        <div class="ui cancel button">Fechar</div>
+        <div class="ui positive right labeled icon button">Buscar<i class="checkmark icon"></i></div>
       </div>
     </div>
 
-    <!-- Message Modals -->
+    <!-- Modais de Mensagens -->
 
     <div class="ui modal" id="modalSendTextMessage"><i class="close icon"></i>
-      <div class="header"> Send Text Message </div>
+      <div class="header"> Enviar Mensagem de Texto </div>
       <div class="content">
         <div class="ui message info hidden" id="sendMessageContainer"></div>
         <div class="ui form">
-          <div class="field"><label>Phone</label><input id="messagesendphone" type="text" placeholder="Type phone number"></div>
-          <div class="field"><label>Message</label><textarea id="messagesendtext"></textarea></div>
+          <div class="field"><label>Telefone</label><input id="messagesendphone" type="text" placeholder="Digite o numero de telefone"></div>
+          <div class="field"><label>Mensagem</label><textarea id="messagesendtext"></textarea></div>
         </div>
       </div>
       <div class="actions">
-        <div class="ui cancel button">Close</div>
-        <div class="ui positive right labeled icon button">Send<i class="checkmark icon"></i></div>
+        <div class="ui cancel button">Fechar</div>
+        <div class="ui positive right labeled icon button">Enviar<i class="checkmark icon"></i></div>
       </div>
     </div>
 
      <div class="ui modal" id="modalDeleteMessage"><i class="close icon"></i>
-      <div class="header"> Delete Message </div>
+      <div class="header"> Apagar Mensagem </div>
       <div class="content">
         <div class="ui message info hidden" id="deleteMessageContainer"></div>
         <div class="ui form">
-          <div class="field"><label>Phone</label><input id="messagedeletephone" type="text" placeholder="Type phone number"></div>
-          <div class="field"><label>Message ID</label><input id="messagedeleteid" type="text" placeholder="Type the message id"></div>
+          <div class="field"><label>Telefone</label><input id="messagedeletephone" type="text" placeholder="Digite o numero de telefone"></div>
+          <div class="field"><label>ID da Mensagem</label><input id="messagedeleteid" type="text" placeholder="Digite o ID da mensagem"></div>
         </div>
       </div>
       <div class="actions">
-        <div class="ui cancel button">Close</div>
-        <div class="ui positive right labeled icon button">Delete<i class="trash icon"></i></div>
+        <div class="ui cancel button">Fechar</div>
+        <div class="ui positive right labeled icon button">Apagar<i class="trash icon"></i></div>
       </div>
     </div>
 
@@ -327,16 +327,16 @@
                   document.getElementById('pairHelp').classList.add('hidden');;
                   // Success case
                   if (data.success && data.data && data.data.LinkingCode) {
-                    document.getElementById('pairInfo').innerHTML = `Your link code is: ${data.data.LinkingCode}`;
+                    document.getElementById('pairInfo').innerHTML = `Seu codigo de pareamento e: ${data.data.LinkingCode}`;
                     scanInterval = setInterval(checkStatus, 1000);
                   } else {
-                    document.getElementById('pairInfo').innerHTML = "Problem getting pairing code";
+                    document.getElementById('pairInfo').innerHTML = "Problema ao obter o codigo de pareamento";
                   }
                 })
                 .catch((error) => {
                   // Error case
-                  document.getElementById('pairInfo').innerHTML = "Problem getting pairing code";
-                  console.error('Pairing error:', error);
+                  document.getElementById('pairInfo').innerHTML = "Problema ao obter o codigo de pareamento";
+                  console.error('Erro de pareamento:', error);
                 });
             }
           });
@@ -412,9 +412,9 @@
         sendTextMessage().then((result)=>{
           document.getElementById("sendMessageContainer").classList.remove('hidden');
           if(result.success===true) {
-             document.getElementById('sendMessageContainer').innerHTML=`Message sent successfully. Id: ${result.data.Id}`
+             document.getElementById('sendMessageContainer').innerHTML=`Mensagem enviada com sucesso. Id: ${result.data.Id}`
           } else {
-             document.getElementById('sendMessageContainer').innerHTML=`Problem sending message: ${result.error}`
+             document.getElementById('sendMessageContainer').innerHTML=`Problema ao enviar mensagem: ${result.error}`
           }
         });
         return false;
@@ -429,9 +429,9 @@
           console.log(result);
           document.getElementById("deleteMessageContainer").classList.remove('hidden');
           if(result.success===true) {
-             document.getElementById('deleteMessageContainer').innerHTML=`Message deleted successfully.`
+             document.getElementById('deleteMessageContainer').innerHTML=`Mensagem apagada com sucesso.`
           } else {
-             document.getElementById('deleteMessageContainer').innerHTML=`Problem deleting message: ${result.error}`
+             document.getElementById('deleteMessageContainer').innerHTML=`Problema ao apagar mensagem: ${result.error}`
           }
         });
         return false;
@@ -456,9 +456,9 @@
         onApprove: function() {
           deleteWebhook().then((response)=>{
             if(response.success==true) {
-              $.toast({ class: 'success', message: `Webhook deleted successfully !` });
+              $.toast({ class: 'success', message: `Webhook removido com sucesso!` });
             } else {
-              $.toast({ class: 'error', message: `could not delete webhook! ${response.error}` });
+              $.toast({ class: 'error', message: `Nao foi possivel remover o webhook! ${response.error}` });
             }
           });
         }
@@ -469,9 +469,9 @@
       $('#modalSetWebhook').modal({onApprove: function() {
         setWebhook().then((result)=>{
           if(result.success===true) {
-             $.toast({ class: 'success', message: `Webhook set successfully !`});
+             $.toast({ class: 'success', message: `Webhook configurado com sucesso!`});
           } else {
-             $.toast({ class: 'error', message: `Problem setting webhook: ${result.error}`});
+        $.toast({ class: 'error', message: `Problema ao configurar webhook: ${result.error}`});
           }
         });
         return true;
@@ -556,10 +556,10 @@
           const userAvatarDiv = document.getElementById('userAvatarContainer');
           userAvatarDiv.innerHTML=`<img src="${data.data.url}" alt="Profile Picture" class="user-avatar">`;
         } else {
-            document.getElementById('userAvatarContainer').innerHTML = 'No user avatar found';
+            document.getElementById('userAvatarContainer').innerHTML = 'Nenhum avatar encontrado';
         }
       }).catch(error => {
-        document.getElementById('userAvatarContainer').innerHTML = 'Error fetching user avatar';
+        document.getElementById('userAvatarContainer').innerHTML = 'Erro ao buscar avatar';
         console.error('Error:', error);
       });
     }
@@ -586,26 +586,26 @@
                 
                 // Display phone number (extracted from JID)
                 const phoneNumber = userJid.split('@')[0];
-                userElement.innerHTML += `<strong>Phone: ${phoneNumber}</strong><br>`;
+                userElement.innerHTML += `<strong>Telefone: ${phoneNumber}</strong><br>`;
                 
                 // Display Status if available
-                userElement.innerHTML += `Status: ${userData.Status || 'Not available'}<br>`;
+                userElement.innerHTML += `Status: ${userData.Status || 'Nao disponivel'}<br>`;
                 
                 // Display VerifiedName if available
-                userElement.innerHTML += `Verified Name: ${userData.VerifiedName || 'Not verified'}<br>`;
+                userElement.innerHTML += `Nome verificado: ${userData.VerifiedName || 'Nao verificado'}<br>`;
                 
                 // Add device count if available
               if (userData.Devices && userData.Devices.length > 0) {
-                    userElement.innerHTML += `Devices: ${userData.Devices.length}<br>`;
+                    userElement.innerHTML += `Dispositivos: ${userData.Devices.length}<br>`;
                 }
                 
                 userInfoDiv.appendChild(userElement);
             }
         } else {
-            document.getElementById('userInfoContainer').innerHTML = 'No user data found';
+            document.getElementById('userInfoContainer').innerHTML = 'Nenhum dado encontrado';
         }
       }).catch(error => {
-        document.getElementById('userInfoContainer').innerHTML = 'Error fetching user info';
+        document.getElementById('userInfoContainer').innerHTML = 'Erro ao buscar informacoes do usuario';
         console.error('Error:', error);
       });
     }
@@ -618,7 +618,7 @@
         if(data.success==true) {
           showQr();
         } else {
-          document.getElementById("incorrectstatus").innerHTML = "Could not connect";
+          document.getElementById("incorrectstatus").innerHTML = "Nao foi possivel conectar";
           document.getElementById('loginQR').classList.remove('hidden');
           document.getElementById('loginCode').classList.remove('hidden');
         }
@@ -655,7 +655,7 @@
       if(status.success==true) {
         if(status.data.LoggedIn === true) {
           scanned = true;
-          document.getElementById("connectstatus").innerHTML = "Connected!";
+          document.getElementById("connectstatus").innerHTML = "Conectado!";
           document.getElementById("connectstatus").classList.remove('red');
           document.getElementById("connectstatus").classList.add('green');
           document.getElementById("connectstatus").classList.remove('hidden');
@@ -698,7 +698,7 @@
       } else {
         scanned = true;
         clearInterval(scanInterval);
-        document.getElementById("connectstatus").innerHTML = "Timeout! Please try again when you are ready to scan the QR code";
+        document.getElementById("connectstatus").innerHTML = "Tempo esgotado! Tente novamente quando estiver pronto para escanear o codigo QR";
         $('#modalLoginQR').modal('hide');
       }
     }
@@ -761,7 +761,7 @@
          webhook = data.data.webhook
          events = data.data.subscribe.join(",")
       } else {
-         webhook = `Problem getting webhook: ${error}`
+         webhook = `Problema ao obter webhook: ${error}`
       }
       $('#modalGetWebhook').modal('show');
       document.getElementById('getWebhookContainer').innerHTML=webhook;
@@ -936,7 +936,7 @@
   }
 
   if(notoken==1) {
-    document.getElementById("connectstatus").innerHTML = "No auth token specified";
+    document.getElementById("connectstatus").innerHTML = "Nenhum token de autenticacao informado";
     $('#modalAuthenticate').modal({closable:false}).modal('show');
   } else {
 
@@ -955,7 +955,7 @@
               if(status.data.Connected === false) {
                   connect().then((data) => {console.log("promise connect 2"); console.log(data);});
               }
-              document.getElementById("connectstatus").innerHTML = "Connected!";
+              document.getElementById("connectstatus").innerHTML = "Conectado!";
               document.getElementById("connectstatus").classList.remove('red');
               document.getElementById("connectstatus").classList.add('green');
               document.getElementById("connectstatus").classList.remove('hidden');
@@ -971,14 +971,14 @@
               document.getElementById('loginCode').classList.remove('hidden');
               document.getElementById('connectstatus').classList.add('hidden');
           } else if(status.error=="Unauthorized") {
-              document.getElementById("incorrectstatus").innerHTML = `Bad Authentication`;
-              document.getElementById("connectstatus").innerHTML = "Invalid Token";
+              document.getElementById("incorrectstatus").innerHTML = `Autenticacao invalida`;
+              document.getElementById("connectstatus").innerHTML = "Token invalido";
               document.getElementById('connectstatus').classList.remove('hidden');
               document.getElementById('invalidCredentials').classList.remove('hidden');
               $('#modalAuthenticate').modal({closable:false}).modal('show');
           }
       } else {
-          document.getElementById("connectstatus").innerHTML = `Bad Authentication ${status.Status}`;
+          document.getElementById("connectstatus").innerHTML = `Falha de autenticacao ${status.Status}`;
           document.getElementById('connectstatus').classList.remove('hidden');
       }
       return;
